@@ -42,7 +42,7 @@ class welcome_window:
 
     def exit_button(self):
         #exit
-        result = tkinter.messagebox.askquestion("Exit", "Do you want to exit?", icon='warning')
+        result = tkinter.messagebox.askquestion("Are you sure?", "Do you want to exit?", icon='warning')
         if result == 'yes':
             self.window.destroy()
         else:
