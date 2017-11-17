@@ -88,7 +88,8 @@ class showing_gragh:
         self.window.mainloop()
 
     def set50(self):
-        demo.create_graph()
+        temp = demo.set50()
+        temp.create_graph()
 
     def back_action(self):
         #back to main menu
