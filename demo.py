@@ -27,9 +27,11 @@ def predict_price(dates, prices, x):
     plt.legend()
     plt.show()
 
-get_data('S50Z171440.csv') # calling get_data method by passing the csv file to it
-print("Dates- ", dates)
-print("Prices- ", prices)
+def create_graph():
+    get_data('S50Z171440.csv') # calling get_data method by passing the csv file to it
+    print("Dates- ", dates)
+    print("Prices- ", prices)
 
-predicted_price = predict_price(dates, prices, 29)
-print(predicted_price)
+    predicted_price = predict_price(dates, prices, 29)
+    print(predicted_price)
+
