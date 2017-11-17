@@ -23,6 +23,7 @@ class main_window:
 
         #Text
         label = tk.Label(self.window, text="Welcom to python", font=("Helvetica", 32)).place(x=230, y=10)
+
         #Button
         fill_button = tk.Button(self.window, text='Text', font=("Helvetica", 20), bg='#00b300', width=10, height=1,\
                             command=self.fill_action).place(x=120, y=300)
@@ -75,7 +76,8 @@ class fill_the_box:
         #Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
                             command=self.back_action).place(x=30, y=520)
-
+        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1, \
+                                command=self.exit_action).place(x=680, y=520)
         self.window.size()
         self.window.mainloop()
 
@@ -85,4 +87,11 @@ class fill_the_box:
         main_window()
         print("back to main menu")
 
+    def exit_action(self):
+        #exit
+        result = tkinter.messagebox.askquestion("Exit", "Do you want to exit?", icon='warning')
+        if result == 'yes':
+            self.window.destroy()
+        else:
+            pass
 main_window()
