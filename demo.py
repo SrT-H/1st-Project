@@ -1,6 +1,6 @@
 import csv
 import numpy as np
-from   sklearn.svm import SVR
+from sklearn.svm import SVR
 import matplotlib.pyplot as plt
 
 #plt.switch_backend('Qt5Agg')  
