@@ -23,22 +23,16 @@ class main_window:
         self.window.geometry('%dx%d+%d+%d' % (800, 600, self.x, self.y))
 
         #Text
-        label = tk.Label(self.window, text="Welcom to python", font=("Helvetica", 32)).place(x=230, y=10)
+        label = tk.Label(self.window, text="Welcome \nto \nStock Market Trade Analysis.", font=("Helvetica", 32)).place(x=120, y=30)
 
         #Button
-        fill_button = tk.Button(self.window, text='Text', font=("Helvetica", 20), bg='#00b300', width=10, height=1,\
-                            command=self.fill_action).place(x=120, y=300)
-        graph_button = tk.Button(self.window, text='Graph', font=("Helvetica", 20), bg='#faf800',  width=10, height=1,\
-                            command=self.graph_action).place(x=500, y=300)
+        graph_button = tk.Button(self.window, text='Graph', font=("Helvetica", 20), bg='green',  width=10, height=1,\
+                            command=self.graph_action).place(x=320, y=320)
         exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1,\
                             command=self.exit_action).place(x=680, y=520)
 
         self.window.size()
         self.window.mainloop()
-
-    def fill_action(self):
-        #insert information
-        print("Fill in the blank.")
 
     def graph_action(self):
         #show graph
@@ -55,7 +49,7 @@ class main_window:
             pass
 
 class showing_gragh:
-    ''' FILL IN THE BOX'''
+    ''' SHOWING GRAPH '''
     def __init__(self):
         #Window
         self.window = tk.Tk()
@@ -80,7 +74,7 @@ class showing_gragh:
         #Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
                             command=self.back_action).place(x=30, y=520)
-        showing_graph = tk.Button(self.window, text='Set50', font=("Helvetica", 20, 'bold'), width=6, height=1, \
+        showing_graph = tk.Button(self.window, text='Set 50', font=("Helvetica", 20, 'bold'), width=6, height=1, \
                                 command=self.set50).place(x=100, y=100)
         exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1, \
                                 command=self.exit_action).place(x=680, y=520)
@@ -88,6 +82,7 @@ class showing_gragh:
         self.window.mainloop()
 
     def set50(self):
+        #create set50 graph
         temp = demo.set50()
         temp.create_graph()
 
