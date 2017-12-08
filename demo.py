@@ -15,7 +15,7 @@ class set50:
             csvFileReader = csv.reader(csvfile)
             next(csvFileReader)	# skipping column names
             for row in csvFileReader:
-                self.dates.append((row[0]))
+                self.dates.append(row[0])
                 self.prices.append(float(row[5]))
         return
 
@@ -31,9 +31,7 @@ class set50:
 
     def create_graph(self):
         self.get_data('S50Z171440.csv') # calling get_data method by passing the csv file to it
-        print("Dates- ", self.dates)
-        print("Prices- ", self.prices)
 
         predicted_price = self.predict_price(self.dates, self.prices, 29)
-        print(predicted_price)
+
 
