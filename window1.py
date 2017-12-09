@@ -23,7 +23,6 @@ class main_window:
         self.window.geometry('%dx%d+%d+%d' % (800, 600, self.x, self.y))
 
         #Text
-<<<<<<< HEAD
         label = tk.Label(self.window, text="Welcom to \nlittle worm PSIT project",\
                          font=("Helvetica", 32)).place(x=180, y=50)
 
@@ -32,30 +31,22 @@ class main_window:
                                  command=self.graph_action).place(x=300, y=260)
         fill_button = tk.Button(self.window, text='About us', font=("Helvetica", 20), bg='#00b300', width=10, height=1,\
                             command=self.about_us).place(x=300, y=400)
-=======
-        label = tk.Label(self.window, text="Welcom to python", font=("Helvetica", 32)).place(x=230, y=10)
+        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1, \
+                                command=self.exit_action).place(x=680, y=520)
 
-        #Button
-        fill_button = tk.Button(self.window, text='Text', font=("Helvetica", 20), bg='#00b300', width=10, height=1,\
-                            command=self.fill_action).place(x=120, y=300)
-        graph_button = tk.Button(self.window, text='Graph', font=("Helvetica", 20), bg='#faf800',  width=10, height=1,\
-                            command=self.graph_action).place(x=500, y=300)
->>>>>>> fb26470b967dd7b25b216950d503f14783be98bb
-        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1,\
-                            command=self.exit_action).place(x=680, y=520)
+        #Label
+        label = tk.Label(self.window, text="Welcom to python", font=("Helvetica", 32)).place(x=230, y=10)
 
         self.window.size()
         self.window.mainloop()
 
-<<<<<<< HEAD
     def about_us(self):
         #insert information
         print("About us")
-=======
+
     def fill_action(self):
         #insert information
         print("Fill in the blank.")
->>>>>>> fb26470b967dd7b25b216950d503f14783be98bb
 
     def graph_action(self):
         #show graph
@@ -65,10 +56,13 @@ class main_window:
 
     def exit_action(self):
         #exit
+        print("Do you want to exit?")
         result = tkinter.messagebox.askquestion("Exit", "Do you want to exit?", icon='warning')
         if result == 'yes':
+            print("EXIT")
             self.window.destroy()
         else:
+            print("Continue")
             pass
 
 class showing_gragh:
@@ -118,7 +112,9 @@ class showing_gragh:
         #exit
         result = tkinter.messagebox.askquestion("Exit", "Do you want to exit?", icon='warning')
         if result == 'yes':
+            print("EXIT")
             self.window.destroy()
         else:
+            print("Continue")
             pass
 main_window()
