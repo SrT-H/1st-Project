@@ -89,11 +89,11 @@ class showing_gragh:
 
         #Graph Button
         bts_graph = tk.Button(self.window, text='BTS', font=("Helvetica", 20), width=6, height=1, \
-                                command=self.show_bts).place(x=300, y=130)
+                                command=self.show_bts).place(x=250, y=130)
         cpn_graph = tk.Button(self.window, text='CPN', font=("Helvetica", 20), width=6, height=1, \
-                                   command=self.show_cpn).place(x=300, y=230)
+                                   command=self.show_cpn).place(x=250, y=230)
         kbank_graph = tk.Button(self.window, text='KBANK', font=("Helvetica", 20), width=6, height=1, \
-                                   command=self.show_kbank).place(x=300, y=330)
+                                   command=self.show_kbank).place(x=350, y=330)
         ptt_graph = tk.Button(self.window, text='PTT', font=("Helvetica", 20), width=6, height=1, \
                                    command=self.show_ptt).place(x=450, y=130)
         true_graph = tk.Button(self.window, text='TRUE', font=("Helvetica", 20), width=6, height=1, \
@@ -173,14 +173,14 @@ class about_us:
         name4 = "Theerut    Sirichai\t\t60070179"
         name5 = "Rinlita    Patsinchongsuk\t60070180"
 
-        label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=300, y=30)
+        label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=310, y=30)
         label2 = tk.Label(self.window, text=description, font=("Helvetica", 18)).place(x=70, y=120)
-        label2_1 = tk.Label(self.window, text="Member", font=("Helvetica", 18, "bold")).place(x=300, y=280)
-        label3 = tk.Label(self.window, text=name1, font=("Helvetica", 15)).place(x=180, y=320)
-        label4 = tk.Label(self.window, text=name2, font=("Helvetica", 15)).place(x=180, y=360)
-        label5 = tk.Label(self.window, text=name3, font=("Helvetica", 15)).place(x=180, y=400)
-        label6 = tk.Label(self.window, text=name4, font=("Helvetica", 15)).place(x=180, y=440)
-        label7 = tk.Label(self.window, text=name5, font=("Helvetica", 15)).place(x=180, y=480)
+        label2_1 = tk.Label(self.window, text="Member", font=("Helvetica", 18, "bold")).place(x=345, y=280)
+        label3 = tk.Label(self.window, text=name1, font=("Helvetica", 15)).place(x=210, y=320)
+        label4 = tk.Label(self.window, text=name2, font=("Helvetica", 15)).place(x=210, y=360)
+        label5 = tk.Label(self.window, text=name3, font=("Helvetica", 15)).place(x=210, y=400)
+        label6 = tk.Label(self.window, text=name4, font=("Helvetica", 15)).place(x=210, y=440)
+        label7 = tk.Label(self.window, text=name5, font=("Helvetica", 15)).place(x=210, y=480)
         #Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
                                 command=self.back_action).place(x=30, y=520)
