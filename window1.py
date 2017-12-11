@@ -1,6 +1,10 @@
 import tkinter as tk
 import tkinter.messagebox
-import demo
+import BTS as bts
+import CPN as cpn
+import KBANK as kbank
+import PTT as ptt
+import TRUE as tru
 
 class main_window:
     ''' MAIN WINDOW'''
@@ -81,21 +85,47 @@ class showing_gragh:
         self.window.geometry('%dx%d+%d+%d' % (800, 600, self.x, self.y))
 
         # Text
-        label = tk.Label(self.window, text="Graph", font=("Helvetica", 32)).place(x=350, y=10)
+        label = tk.Label(self.window, text="Graphs", font=("Helvetica", 32, 'bold')).place(x=330, y=20)
 
-        #Button
+        #Graph Button
+        bts_graph = tk.Button(self.window, text='BTS', font=("Helvetica", 20), width=6, height=1, \
+                                command=self.show_bts).place(x=300, y=130)
+        cpn_graph = tk.Button(self.window, text='CPN', font=("Helvetica", 20), width=6, height=1, \
+                                   command=self.show_cpn).place(x=300, y=230)
+        kbank_graph = tk.Button(self.window, text='KBANK', font=("Helvetica", 20), width=6, height=1, \
+                                   command=self.show_kbank).place(x=300, y=330)
+        ptt_graph = tk.Button(self.window, text='PTT', font=("Helvetica", 20), width=6, height=1, \
+                                   command=self.show_ptt).place(x=450, y=130)
+        true_graph = tk.Button(self.window, text='TRUE', font=("Helvetica", 20), width=6, height=1, \
+                                   command=self.show_true).place(x=450, y=230)
+        #Action Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
-                            command=self.back_action).place(x=30, y=520)
-        showing_graph = tk.Button(self.window, text='Set50', font=("Helvetica", 20, 'bold'), width=6, height=1, \
-                                command=self.set50).place(x=100, y=100)
+                                command=self.back_action).place(x=30, y=520)
         exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1, \
                                 command=self.exit_action).place(x=680, y=520)
+
         self.window.size()
         self.window.mainloop()
 
-    def set50(self):
-        temp = demo.set50()
-        temp.create_graph()
+    def show_bts(self):
+        temp = bts.bts_graph()
+        temp.show()
+
+    def show_cpn(self):
+        temp = cpn.cpn_graph()
+        temp.show()
+
+    def show_kbank(self):
+        temp = kbank.kbank_graph()
+        temp.show()
+
+    def show_ptt(self):
+        temp = ptt.ptt_graph()
+        temp.show()
+
+    def show_true(self):
+        temp = tru.true_graph()
+        temp.show()
 
     def back_action(self):
         #back to main menu
@@ -134,7 +164,7 @@ class about_us:
         self.window.geometry('%dx%d+%d+%d' % (800, 600, self.x, self.y))
 
         # Text
-        label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=350, y=10)
+        label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=330, y=10)
 
         #Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
