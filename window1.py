@@ -168,10 +168,10 @@ class about_us:
                       "\nby just clicking the bottons. Its contains all of the contents " \
                       "\nthat we will represent in the presentation sequence."
         name1 = "Pathompong Subtechitmanee\t60070172"
-        name2 = "Phubodee Thaneerat\t60070174"
-        name3 = "Weeranan Kitpuangsuwan\t60070178"
-        name4 = "Theerut Sirichia\t\t60070179"
-        name5 = "RinlitaPatsinchongsuk\t60070180"
+        name2 = "Phubodee   Thaneerat\t60070174"
+        name3 = "Weeranan   Kitpuangsuwan\t60070178"
+        name4 = "Theerut    Sirichai\t\t60070179"
+        name5 = "Rinlita    Patsinchongsuk\t60070180"
 
         label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=300, y=30)
         label2 = tk.Label(self.window, text=description, font=("Helvetica", 18)).place(x=70, y=120)
