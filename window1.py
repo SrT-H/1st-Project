@@ -101,7 +101,7 @@ class showing_gragh:
         #Action Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
                                 command=self.back_action).place(x=30, y=520)
-        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1, \
+        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='#ff4d4d', width=5, height=1, \
                                 command=self.exit_action).place(x=680, y=520)
 
         self.window.size()
@@ -164,12 +164,27 @@ class about_us:
         self.window.geometry('%dx%d+%d+%d' % (800, 600, self.x, self.y))
 
         # Text
-        label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=330, y=10)
+        description = "This GUI is use to make all user get access to the graphs easily " \
+                      "\nby just clicking the bottons. Its contains all of the contents " \
+                      "\nthat we will represent in the presentation sequence."
+        name1 = "Pathompong Subtechitmanee\t60070172"
+        name2 = "Phubodee Thaneerat\t60070174"
+        name3 = "Weeranan Kitpuangsuwan\t60070178"
+        name4 = "Theerut Sirichia\t\t60070179"
+        name5 = "RinlitaPatsinchongsuk\t60070180"
 
+        label = tk.Label(self.window, text="About us", font=("Helvetica", 32)).place(x=300, y=30)
+        label2 = tk.Label(self.window, text=description, font=("Helvetica", 18)).place(x=70, y=120)
+        label2_1 = tk.Label(self.window, text="Member", font=("Helvetica", 18, "bold")).place(x=300, y=280)
+        label3 = tk.Label(self.window, text=name1, font=("Helvetica", 15)).place(x=180, y=320)
+        label4 = tk.Label(self.window, text=name2, font=("Helvetica", 15)).place(x=180, y=360)
+        label5 = tk.Label(self.window, text=name3, font=("Helvetica", 15)).place(x=180, y=400)
+        label6 = tk.Label(self.window, text=name4, font=("Helvetica", 15)).place(x=180, y=440)
+        label7 = tk.Label(self.window, text=name5, font=("Helvetica", 15)).place(x=180, y=480)
         #Button
         back_button = tk.Button(self.window, text='<<', font=("Helvetica", 20, 'bold'), width=5, height=1, \
                                 command=self.back_action).place(x=30, y=520)
-        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='red', width=5, height=1, \
+        exit_button = tk.Button(self.window, text='EXIT', font=("Helvetica", 20, 'bold'), bg='#ff4d4d', width=5, height=1, \
                                 command=self.exit_action).place(x=680, y=520)
 
         self.window.size()
