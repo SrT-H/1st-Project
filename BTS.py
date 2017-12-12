@@ -23,9 +23,7 @@ class bts_graph:
 		plt.xlabel('Months')
 		plt.ylabel('Prices')
 		plt.title(name)
-		plt.legend()
 		plt.show()
-		return
 
 	def show(self):
 		self.get_data_and_plot('BTS43200.csv', self.months, self.prices, 'BTS Group Holdings Public Company')

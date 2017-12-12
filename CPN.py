@@ -23,9 +23,7 @@ class cpn_graph:
 		plt.xlabel('Months')
 		plt.ylabel('Prices')
 		plt.title(name)
-		plt.legend()
 		plt.show()
-		return
 
 	def show(self):
 		self.get_data_and_plot('CPN43200.csv', self.months, self.prices, 'Central Pattana Public Company Limited')
