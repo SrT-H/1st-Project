@@ -15,7 +15,8 @@ class cpn_graph:
 			for row in csvFileReader:
 				self.months.append(int(row[0].split('.')[1]))
 				self.prices.append(float(row[5]))
-			
+
+		#reshape the data in fist row which are year, month, date to display only month position
 		months = np.reshape(self.months,(len(self.months), 1))
 
 		plt.plot(months, prices, '-')
